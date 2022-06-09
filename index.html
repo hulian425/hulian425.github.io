@@ -168,8 +168,9 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2022-06-09 16:04:27" itemprop="dateCreated datePublished" datetime="2022-06-09T16:04:27+08:00">2022-06-09</time>
+              <time title="创建时间：2022-06-09 16:04:27 / 修改时间：21:22:00" itemprop="dateCreated datePublished" datetime="2022-06-09T16:04:27+08:00">2022-06-09</time>
             </span>
 
           
@@ -183,7 +184,37 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
+          <h2 id="scenario-场景"><a href="#scenario-场景" class="headerlink" title="scenario 场景"></a>scenario 场景</h2><h3 id="需要设计哪些功能"><a href="#需要设计哪些功能" class="headerlink" title="需要设计哪些功能"></a>需要设计哪些功能</h3><ul>
+<li>Register&#x2F;Login</li>
+<li>User Profile Display &#x2F; Edit</li>
+<li>Upload Imag &#x2F; Vedio</li>
+<li>Search</li>
+<li>Post &#x2F; Share a tweet</li>
+<li>Timeline &#x2F; News Feed</li>
+<li>Follow &#x2F; Unfollow a user</li>
+</ul>
+<h3 id="Analysis-amp-predict"><a href="#Analysis-amp-predict" class="headerlink" title="Analysis &amp; predict"></a>Analysis &amp; predict</h3><ul>
+<li><p>并发用户 Concurrent User</p>
+<ul>
+<li>日活跃每个用户平均请求数&#x2F;一天多少秒 &#x3D; $150M*60&#x2F;86400$</li>
+<li>峰值$Peak &#x3D; Average Concurrent User*3 ~300K$</li>
+<li>快速增长的产品Fast Growing<ul>
+<li>MAX peak users in 3 months &#x3D; Peak users * 2</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>读频率Read QPS</p>
+<ul>
+<li>300K</li>
+</ul>
+</li>
+<li><p>写频率Write QPS</p>
+</li>
+<li><p>5K</p>
+</li>
+</ul>
+
       
     </div>
 
