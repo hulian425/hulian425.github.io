@@ -170,7 +170,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-06-09 16:04:27 / 修改时间：21:28:37" itemprop="dateCreated datePublished" datetime="2022-06-09T16:04:27+08:00">2022-06-09</time>
+              <time title="创建时间：2022-06-09 16:04:27 / 修改时间：23:10:33" itemprop="dateCreated datePublished" datetime="2022-06-09T16:04:27+08:00">2022-06-09</time>
             </span>
 
           
@@ -212,6 +212,33 @@
 <li><p>写频率Write QPS</p>
 <ul>
 <li>5K</li>
+</ul>
+</li>
+</ul>
+<h3 id="QPS与服务器、Database的关系"><a href="#QPS与服务器、Database的关系" class="headerlink" title="QPS与服务器、Database的关系"></a>QPS与服务器、Database的关系</h3><ul>
+<li><p>QPS &#x3D; 100</p>
+<ul>
+<li>用笔记本做web服务器就好</li>
+</ul>
+</li>
+<li><p>QPS &#x3D; 1K</p>
+<ul>
+<li>用一台好一点的web服务器差不多</li>
+<li>需要考虑single point failure</li>
+</ul>
+</li>
+<li><p>QPS &#x3D; 1m</p>
+<ul>
+<li>需要建设一个1000台Web服务器的集群</li>
+<li>需要考虑如何Maintaince（某一台挂了如何处理）</li>
+</ul>
+</li>
+<li><p>QPS和Web server（服务器）&#x2F; Database（数据库之间的关系）</p>
+<ul>
+<li>一台Web Server约承受量是1K的QPS（考虑到逻辑处理时间以及数据库查询的瓶颈）</li>
+<li>一台SQL Database约承受量是1K的QPS（如果JOIN和INDEX query比较多的话，这个值会更小）</li>
+<li>一台NoSQL Database（Cassandra）约承受量是10K的QPS</li>
+<li>一台NoSQL Database（Mencached）约承受量是1M的QPS</li>
 </ul>
 </li>
 </ul>
