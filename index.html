@@ -168,10 +168,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-06-09 16:04:27 / 修改时间：23:10:33" itemprop="dateCreated datePublished" datetime="2022-06-09T16:04:27+08:00">2022-06-09</time>
+              <time title="创建时间：2022-06-09 16:04:27" itemprop="dateCreated datePublished" datetime="2022-06-09T16:04:27+08:00">2022-06-09</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-06-12 01:41:01" itemprop="dateModified" datetime="2022-06-12T01:41:01+08:00">2022-06-12</time>
+              </span>
 
           
 
@@ -242,6 +248,103 @@
 </ul>
 </li>
 </ul>
+<h2 id="Service-服务"><a href="#Service-服务" class="headerlink" title="Service 服务"></a>Service 服务</h2><h3 id="将大系统拆分为小服务"><a href="#将大系统拆分为小服务" class="headerlink" title="将大系统拆分为小服务"></a>将大系统拆分为小服务</h3><ul>
+<li>Router<ul>
+<li>User Service<ul>
+<li>Register</li>
+<li>Login</li>
+</ul>
+</li>
+<li>Tweet Service<ul>
+<li>Post a tweet</li>
+<li>News Feed</li>
+<li>Timeline</li>
+</ul>
+</li>
+<li>Media Service<ul>
+<li>Upload Image</li>
+<li>Upload Vedio</li>
+</ul>
+</li>
+<li>Friendship Service<ul>
+<li>Follow</li>
+<li>Unfollow</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Storage-存储"><a href="#Storage-存储" class="headerlink" title="Storage 存储"></a>Storage 存储</h2><h3 id="数据如何存储与访问"><a href="#数据如何存储与访问" class="headerlink" title="数据如何存储与访问"></a>数据如何存储与访问</h3><ul>
+<li>数据库系统Database<ul>
+<li>关系型数据库SQL Database<ul>
+<li>用户信息User Table</li>
+</ul>
+</li>
+<li>非关系型数据库NoSQL Database<ul>
+<li>推文Tweets</li>
+<li>社交图谱Social Graph(followers)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>文件系统File System<ul>
+<li>图片、视频 Media Files</li>
+</ul>
+</li>
+<li>缓存系统Cache<ul>
+<li>不支持数据持久化 Nonpersistent</li>
+<li>效率高，内存级访问速度</li>
+</ul>
+</li>
+</ul>
+<h3 id="数据如何存储与访问-1"><a href="#数据如何存储与访问-1" class="headerlink" title="数据如何存储与访问"></a>数据如何存储与访问</h3><ol>
+<li>为每个Application&#x2F;Service选择合适的存储结构</li>
+<li>细化数据表结构</li>
+</ol>
+<h2 id="设计schema"><a href="#设计schema" class="headerlink" title="设计schema"></a>设计schema</h2><h3 id="User-Service"><a href="#User-Service" class="headerlink" title="User Service"></a>User Service</h3><table>
+<thead>
+<tr>
+<th>User Table</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>id</td>
+<td>intger</td>
+</tr>
+<tr>
+<td>username</td>
+<td>varchar</td>
+</tr>
+<tr>
+<td>email</td>
+<td>varchar</td>
+</tr>
+<tr>
+<td>password</td>
+<td>varchar</td>
+</tr>
+</tbody></table>
+<h3 id="Friendship-Service"><a href="#Friendship-Service" class="headerlink" title="Friendship Service"></a>Friendship Service</h3><table>
+<thead>
+<tr>
+<th>Friendship Table</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>from_user_id</td>
+<td>Foreign Key</td>
+</tr>
+<tr>
+<td>to_user_id</td>
+<td>Foreign Key</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>timestamp</td>
+</tr>
+</tbody></table>
 
       
     </div>
